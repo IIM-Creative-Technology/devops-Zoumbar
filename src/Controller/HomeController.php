@@ -14,17 +14,10 @@ class HomeController extends AbstractController
     public function index()
     {
 
-        $post = new Post();
-
-        $post -> setTitle('Titre 1')
-            ->setContent("Lorem Ipsum")
-            ->setAuthor('Esteban')
-            ->setCreatedAt(new \DateTime());
-         
+        
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            "post" => $post
         ]);
     }
 }
